@@ -1,11 +1,17 @@
-import CategoriesMenu from './components/categories-menu/Categories-menu.component';
-import categories from './data/categories.json';
+import { Routes, Route } from 'react-router-dom';
+import NavigationBar from './routes/navigation/Navigation-bar.component';
+import Home from './routes/home/Home.component';
+import SignIn from './routes/sign-in/Sign-in.component';
 
 const App = () => {
   return (
-    <div>
-      <CategoriesMenu categories={categories}/>
-    </div>
+    <Routes>
+      <Route path="/" element={<NavigationBar />}>
+        <Route index element={<Home />} />
+        <Route path="shop" element={<div>Shop Page</div>} />
+        <Route path="sign-in" element={<SignIn />} />
+      </Route>
+    </Routes>
   );
 };
 
