@@ -10,6 +10,7 @@ import './navigation.styles.scss';
 import CartIcon from '../../components/cart-icon/Cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/Cart-dropdown.component';
 
+
 const NavigationBar = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartDropdownOpen } = useContext(CartContext)

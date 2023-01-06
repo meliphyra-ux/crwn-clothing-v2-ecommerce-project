@@ -10,9 +10,6 @@
   top: 90px;
   right: 40px;
   z-index: 5;
-  animation-name: open;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
 
   .empty-message {
     font-size: 18px;
@@ -20,7 +17,7 @@
   }
 
   .cart-items {
-    height: 320px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     overflow: scroll;
@@ -28,13 +25,5 @@
 
   button {
     margin-top: auto;
-  }
-}
-@keyframes open {
-  0%{
-    height: 40px;
-  }
-  100%{
-    height: 340px;
   }
 }
