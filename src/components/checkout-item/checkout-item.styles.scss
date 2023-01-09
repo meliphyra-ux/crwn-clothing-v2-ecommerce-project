@@ -1,0 +1,8 @@
+.checkout-item-container{
+    justify-content: space-between;
+    & , div{
+        display: flex;
+        align-items: center;
+        
+    }
+}
