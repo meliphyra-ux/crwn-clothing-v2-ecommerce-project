@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import './sign-in-form.styles.scss';
+import { SignInContainer, ButtonsContainer } from './sign-in-form.styles.js';
 import FormInput from '../form-input/Form-input.component';
 
 import {
@@ -48,7 +48,7 @@ const SignInForm = () => {
     await signInWithGooglePopup();
   };
   return (
-    <div className="sign-up-container">
+    <SignInContainer>
       <h2>Have an account?</h2>
       <span>Sign in with your email & password</span>
       <form onSubmit={handleSubmit}>
@@ -69,16 +69,16 @@ const SignInForm = () => {
           name="password"
           value={password}
         />
-        <div className="buttons-container">
+        <ButtonsContainer>
           <Button buttonType="inverted" type="submit">
             Sign in
           </Button>
           <Button buttonType="google" type="button" onClick={signInWithGoogle}>
             Google Sign In
           </Button>
-        </div>
+        </ButtonsContainer>
       </form>
-    </div>
+    </SignInContainer>
   );
 };
 

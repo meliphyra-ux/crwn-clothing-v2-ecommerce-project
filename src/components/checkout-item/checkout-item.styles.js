@@ -1,4 +1,6 @@
-.checkout-item-container {
+import styled from 'styled-components';
+
+export const CheckoutItemContainer = styled.div`
   width: 100%;
   display: flex;
   min-height: 100px;
@@ -35,11 +37,11 @@
       margin: 0 10px;
     }
   }
+`;
 
-  .remove-button {
-    width: 17%;
-    padding-right: 17px;
-    text-align: right;
-    cursor: pointer;
-  }
-}
+export const RemoveButton = styled.div`
+  width: 17%;
+  padding-right: 17px;
+  text-align: right;
+  cursor: pointer;
+`;

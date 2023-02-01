@@ -12,7 +12,6 @@ const CategoriesPreview = () => {
         const products = categoriesMap[title]
         return <CategoryPreview title={title} products={products} />;
       })}
-      <div className="products-container"></div>
     </>
   );
 };

@@ -1,19 +1,18 @@
-import React from "react";
-import "./category-item.styles.scss";
+import React from 'react';
+import { CategoryContainer, CategoryBodyContainer, BackgroundImage } from './category-item.styles.js';
 
 const CategoryItem = ({ category }) => {
   const { title, imageUrl } = category;
   return (
-    <div className='category-container'>
-      <div
-        className='background-image'
+    <CategoryContainer>
+      <BackgroundImage
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
-      <div className='category-body-container'>
+      <CategoryBodyContainer>
         <h2>{title.toUpperCase()}</h2>
         <p>Shop Now</p>
-      </div>
-    </div>
+      </CategoryBodyContainer>
+    </CategoryContainer>
   );
 };
 

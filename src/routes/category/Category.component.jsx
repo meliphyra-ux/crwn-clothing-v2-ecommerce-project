@@ -5,7 +5,7 @@ import ProductCard from '../../components/product-card/Product-card.component';
 
 import { CategoriesContext } from '../../contexts/Categories.context';
 
-import './category.styles.scss';
+import { CategoryPageContainer, Title } from './category.styles.js';
 
 const Category = () => {
   const { category } = useParams();
@@ -16,13 +16,13 @@ const Category = () => {
   );
   return (
     <>
-      <h2 className='title'>{category.toUpperCase()}</h2>
-      <div className="category-page-container">
+      <Title>{category.toUpperCase()}</Title>
+      <CategoryPageContainer>
         {products &&
           products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-      </div>
+      </CategoryPageContainer>
     </>
   );
 };
