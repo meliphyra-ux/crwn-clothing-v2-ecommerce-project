@@ -7,7 +7,7 @@ import {
   signInUserWithEmailAndPassword,
   signInWithGooglePopup,
 } from '../../utils/firebase/firebase.utils';
-import Button from '../button/Button.component';
+import Button, { BUTTON_TYPE_CLASSES } from '../button/Button.component';
 
 const defaultFormFields = {
   email: '',
@@ -70,10 +70,10 @@ const SignInForm = () => {
           value={password}
         />
         <ButtonsContainer>
-          <Button buttonType="inverted" type="submit">
+          <Button buttonType={BUTTON_TYPE_CLASSES.inverted} type="submit">
             Sign in
           </Button>
-          <Button buttonType="google" type="button" onClick={signInWithGoogle}>
+          <Button buttonType={BUTTON_TYPE_CLASSES.google} type="button" onClick={signInWithGoogle}>
             Google Sign In
           </Button>
         </ButtonsContainer>

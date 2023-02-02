@@ -15,6 +15,19 @@ export const Group = styled.div`
     letter-spacing: 0.3em;
   }
 `;
+
+export const FormInputLabel = styled.label`
+  color: ${$subColor};
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all;
+  ${props => props.length ? shrinkLabel : ''}
+`;
+
 export const FormInputField = styled.input`
   background: none;
   background-color: white;
@@ -31,19 +44,8 @@ export const FormInputField = styled.input`
     outline: none;
   }
 
-  &:focus ~ .form-input-label {
+  &:focus ~ ${FormInputLabel} {
     ${shrinkLabel}
   }
 `;
 
-export const FormInputLabel = styled.label`
-  color: ${$subColor};
-  font-size: 16px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 300ms ease all;
-  ${props => props.length ? shrinkLabel : ''}
-`;
