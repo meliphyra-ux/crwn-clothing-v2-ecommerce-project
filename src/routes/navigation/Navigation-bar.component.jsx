@@ -1,20 +1,20 @@
 import { Outlet } from 'react-router-dom';
-import { useContext } from 'react';
 import { useSelector } from 'react-redux';
 
-import { CartContext } from '../../contexts/Cart.context';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
+
+import { selectCurrentUser } from '../../store/user/user.selector';
+import { selectIsCartDropdownOpen } from '../../store/cart/cart.selectors';
 
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 import { NavigationContainer, NavLink, LogoContainer, NavLinksContainer } from './navigation.styles.js';
 import CartIcon from '../../components/cart-icon/Cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/Cart-dropdown.component';
-import { selectCurrentUser } from '../../store/user/user.selector';
 
 
 const NavigationBar = () => {
   const currentUser = useSelector(selectCurrentUser)
-  const { isCartDropdownOpen } = useContext(CartContext)
+  const isCartDropdownOpen = useSelector(selectIsCartDropdownOpen)
   const handleSignOut = async () => {
     try{
       await signOutUser()
